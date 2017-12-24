@@ -15,7 +15,7 @@ padding-top: 62.4px;
 /* Navigation */
 .navbar-brand
 {
-font-family: 'Montserrat', Sans Serif;
+font-family: 'Spectral SC', Sans Serif;
 font-size: 1.5rem;
 }
 .nav-item
@@ -25,6 +25,7 @@ padding-top:4px;
 }
 .nav-link
 {
+font-family: 'Poppins', Sans Serif;
 transition: all linear 0.2s;
 }
 .nav-div
