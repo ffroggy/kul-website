@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Nicholas Chera</title>
+    {% block head-meta %}
+        <meta charset="utf-8">
+        <meta name="keywords" content="sidekick, imt, device solutions">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock %}
+
+    {% block head-css %}
+        <link rel="stylesheet" href="{% static 'dist/css/bootstrap.css' %}" />
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'style.css' %}"/>
+    {% endblock %}
+    {% block load-javascript %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'dist/js/bootstrap.min.js' %}"></script>
+    {% endblock %}
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="header">
+        {% include 'kulsite/nav.html' %}
+    </div>
+    <div class="body">
+        {% block content %} {% endblock %}
+    </div>
+</div>
+</body>
+</html>

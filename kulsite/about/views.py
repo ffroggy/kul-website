@@ -1,5 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from kulsite.views import load_page
 
 
 def index(request):
-    return HttpResponse("Hi, this is the about page!")
+    return load_page(request, 'about/index.html', {})
