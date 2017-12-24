@@ -1,4 +1,35 @@
 .body
 {
-padding-top: 56px;
+padding-top: 62.4px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* Navigation */
+.navbar-brand
+{
+font-family: 'Montserrat', Sans Serif;
+font-size: 1.5rem;
+}
+.nav-item
+{
+font-size: 1.1rem;
+padding-top:4px;
+}
+.nav-link
+{
+transition: all linear 0.2s;
+}
+.nav-div
+{
+color: rgba(255, 255, 255, 0.5);
+font-size: 1.1rem;
+margin: 0.7rem 0px 0px 0px;
 }
