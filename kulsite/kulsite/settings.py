@@ -29,7 +29,7 @@ SECRET_KEY = conf['prod']['secret']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [conf['host']['prod']]  # define more here in your config file
 
 
 # Application definition
