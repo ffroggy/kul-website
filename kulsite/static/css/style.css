@@ -25,7 +25,7 @@ padding-top:4px;
 }
 .nav-link
 {
-font-family: 'Poppins', Sans Serif;
+font-family: 'Crimson Text', Sans Serif;
 transition: all linear 0.2s;
 }
 .nav-div
@@ -33,4 +33,14 @@ transition: all linear 0.2s;
 color: rgba(255, 255, 255, 0.5);
 font-size: 1.1rem;
 margin: 0.7rem 0px 0px 0px;
+}
+.nav-icons
+{
+color: rgba(255, 255, 255, 0.5);
+font-size: 1.5rem;
+transition: all linear 0.1s;
+}
+.nav-icons:hover
+{
+color: rgba(255, 255, 255, 0.75);
 }
