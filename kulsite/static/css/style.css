@@ -15,8 +15,9 @@ padding-top: 62.4px;
 /* Navigation */
 .navbar-brand
 {
-font-family: 'Spectral SC', Sans Serif;
+font-family: 'Cabin Sketch', Sans Serif;
 font-size: 1.5rem;
+transition: all linear 0.1s;
 }
 .nav-item
 {
@@ -25,24 +26,49 @@ padding-top:4px;
 }
 .nav-link
 {
-font-family: 'Crimson Text', Sans Serif;
+font-family: 'Neucha', Sans Serif;
 transition: all linear 0.2s;
+}
+.button-nav
+{
+font-size:1.3rem;
+cursor: pointer;
 }
 .nav-div
 {
-color: rgba(255, 255, 255, 0.5);
-font-size: 1.1rem;
+color: rgba(255, 255, 255, 0.75);
+font-size: 1.3rem;
 margin: 0.7rem 0px 0px 0px;
+}
+.nav-links
+{
+display:flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.nav-ext-icon
+{
+padding: 0px 5px;
+height: 45px;
+width: 45px;
+display: flex;
+justify-content: space-around;
+align-items: center
 }
 .nav-icons
 {
-color: rgba(255, 255, 255, 0.5);
-font-size: 1.5rem;
+color: white;
+font-size: 2.5rem;
 transition: all linear 0.1s;
+border-radius: 3px;
 }
-.nav-icons:hover
+.nav-ext-icon:hover
 {
-color: rgba(255, 255, 255, 0.75);
+background-color: white;
+}
+.nav-ext-icon:hover .nav-icons
+{
+color: #3a3a3a;
 }
 
 /* Home Page */
@@ -53,95 +79,22 @@ flex-direction: column;
 align-items: center;
 justify-content: space-around;
 }
+.home-name
+{
+font-size: 7rem;
+font-family: 'Cabin Sketch', Sans Serif;
+color: white;
+text-align: center;
+}
 
 /* Hexagon styling */
-
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-family: 'Crimson Text', Georgia, serif;
-}
 body {
-  color: hsl(0, 0%, 10%);
-  background-color: hsl(0, 0%, 95%);
-  border-top: 5px solid hsl(220, 50%, 75%);
+  color: white;
+  background-image: url('/static/home/milky_way.jpg');
+  background-color: black;
   max-width: 920px;
   margin: 0 auto;
   padding: 30px;
   bottom: 0;
   top: 0;
-}
-.hexagon {
-  position: relative;
-  display: inline-block;
-  /* left/right margin approx. 25% of .hexagon width + spacing */
-  margin: 1px 18px;
-  background-color: hsl(220, 75%, 75%);
-  text-align: center;
-}
-.hexagon, .hexagon::before, .hexagon::after {
-  /* easy way: height is width * 1.732
-  actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
-  remove border-radius for sharp corners on hexagons */
-  width: 67px;
-  height: 116px;
-  border-radius: 20%/5%;
-}
-.hexagon::before {
-  background-color: inherit;
-  content: "";
-  position: absolute;
-  left: 0;
-  transform: rotate(-60deg);
-}
-.hexagon::after {
-  background-color: inherit;
-  content: "";
-  position: absolute;
-  left: 0;
-  transform: rotate(60deg);
-}
-.hexagon:nth-child(even) {
-  /* top approx. 50% of .hexagon height + spacing */
-  top: 59px;
-}
-.hexagon:hover {
-  background-color: hsla(60, 75%, 75%, 1.0);
-  cursor: pointer;
-  z-index: 105;
-}
-.hexagon:active {
-  background-color: hsla(60, 75%, 50%, 1.0);
-  z-index: 110;
-}
-.hexanone {
-  position: relative;
-  display: inline-block;
-  width: 67px;
-  height: 116px;
-  margin: 1px 18px;
-}
-.hexanone:nth-child(even) {
-  top: 59px;
-}
-.hexagontent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 140%;
-  font-size: 1rem;
-  line-height: 1.2;
-  z-index: 100;
-}
-.ibws-fix {
-  /* inline-block whitespace fix */
-  font-size: 0;
-}
-.honeycomb {
-  margin: 0 auto;
-  text-align: center;
 }
