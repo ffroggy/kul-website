@@ -1,6 +1,12 @@
-.body
-{
-padding-top: 62.4px;
+/* Big-picture styling */
+body {
+  color: white;
+  background-image: url('/static/home/milky_way.jpg');
+  background-color: black;
+  max-width: 1300px;
+  margin: 0 auto;
+  bottom: 0;
+  top: 0;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -78,7 +84,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-height: 60%;
+height: 70%;
 }
 .home-name
 {
@@ -136,13 +142,31 @@ font-family: 'Nova Mono', Sans Serif;
 font-size: 2.5rem;
 }
 
-/* Hexagon styling */
-body {
-  color: white;
-  background-image: url('/static/home/milky_way.jpg');
-  background-color: black;
-  max-width: 1300px;
-  margin: 0 auto;
-  bottom: 0;
-  top: 0;
+/* Projects Page */
+.skill-row
+{
+display:flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 80%;
+}
+.skill
+{
+flex-basis: 10rem;
+padding:10px;
+font-size:1rem;
+border: 2px solid white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.skill-blank
+{
+flex-basis: 10rem;
+padding: 12px;
+}
+.skill-descr
+{
+margin:0px;
 }

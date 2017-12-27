@@ -1,5 +1,52 @@
 {% extends 'kulsite/app-base.html' %}
 {% load staticfiles %}
 {% block content %}
-<p>This is the projects page!</p>
+<h5>View By:</h5>
+<div class="btn-group" role="group" aria-label="...">
+    <button class="btn disp-picker btn-outline-light active" id="position">Position</button>
+    <button class="btn disp-picker btn-outline-light" id="project">Project</button>
+    <button class="btn disp-picker btn-outline-light" id="skill">Skill</button>
+</div>
+
+<div class="proj-wrap" id="position-content">
+    <h2>Position</h2>
+</div>
+
+<div class="proj-wrap" id="project-content"style="display:none">
+    <h2>Project</h2>
+</div>
+
+<div class="proj-wrap" id="skill-content" style="display:none">
+    <h2>Skill</h2>
+    <div class="periodic">
+        <div class="skill-row">
+            <div class="skill" id="python">
+                <p class="skill-descr">Python</p>
+            </div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill" id="postgres">
+                <p class="skill-descr">PostgreSQL</p>
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill" id="django">
+                <p class="skill-descr">Django</p>
+            </div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill" id="javascript">
+                <p class="skill-descr">Javascript</p>
+            </div>
+            <div class="skill" id="ember">
+                <p class="skill-descr">Ember</p>
+            </div>
+            <div class="skill" id="mongo">
+                <p class="skill-descr">MongoDB</p>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
