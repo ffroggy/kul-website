@@ -14,13 +14,15 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
         <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     {% endblock %}
     {% block load-javascript %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/'|add:curr_page|add:'.js' %}"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script defer type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script defer type="text/javascript" src="{% static 'js/'|add:curr_page|add:'.js' %}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     {% endblock %}
 </head>
 

@@ -77,7 +77,8 @@ color: #3a3a3a;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
+height: 60%;
 }
 .home-name
 {
@@ -86,15 +87,62 @@ font-family: 'Cabin Sketch', Sans Serif;
 color: white;
 text-align: center;
 }
+.sub-wrap
+{
+display:flex;
+flex-direction: row;
+align-items: center;
+margin-bottom: 1rem;
+}
+.sub-bracket
+{
+font-size:4rem;
+font-family: 'Nova Mono', Sans Serif;
+transition: all linear 0.2s;
+}
+.home-subtitle
+{
+font-family: 'Nova Mono', Sans Serif;
+font-size:2.5rem;
+text-align:center;
+flex-basis:auto;
+}
+.home-info-card
+{
+background-color:rgba(0,0,0, 0.25);
+border: 1px solid #626262;
+width: 15rem;
+}
+.home-info-header
+{
+font-size: 2rem;
+}
+.home-info-text
+{
+font-size: 1.25rem;
+}
+.card-minimal
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+.ruler
+{
+visibility:hidden;
+white-space:nowrap;
+font-family: 'Nova Mono', Sans Serif;
+font-size: 2.5rem;
+}
 
 /* Hexagon styling */
 body {
   color: white;
   background-image: url('/static/home/milky_way.jpg');
   background-color: black;
-  max-width: 920px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 30px;
   bottom: 0;
   top: 0;
 }
