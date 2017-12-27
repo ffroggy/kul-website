@@ -4,16 +4,17 @@ var titles = [
     "Dreamer",
     "Developer",
     "Writer",
+    "Scholar",
     "Pie Enthusiast",
     "Pi Enthusiast",
     "Raspberry Pi Enthusiast",
     "Cryptocurrency Collector",
+    "Open Source Believer",
     "Burrito Lover",
     "Bibliophile",
     "Riddler",
     "Storyteller",
-    "Moviegoer",
-    "Scholar",
+    "Web Programmer",
 ];
 function updateSubtitle() {
     var old_len = titles[index].length;
