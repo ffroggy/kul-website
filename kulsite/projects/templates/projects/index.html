@@ -3,50 +3,153 @@
 {% block content %}
 <h5>View By:</h5>
 <div class="btn-group" role="group" aria-label="...">
-    <button class="btn disp-picker btn-outline-light active" id="position">Position</button>
+    <button class="btn disp-picker btn-outline-light" id="position">Position</button>
     <button class="btn disp-picker btn-outline-light" id="project">Project</button>
-    <button class="btn disp-picker btn-outline-light" id="skill">Skill</button>
+    <button class="btn disp-picker btn-outline-light active" id="skill">Skill</button>
 </div>
 
-<div class="proj-wrap" id="position-content">
+<div class="proj-wrap" id="position-content" style="display:none">
     <h2>Position</h2>
 </div>
 
-<div class="proj-wrap" id="project-content"style="display:none">
+<div class="proj-wrap" id="project-content" style="display:none">
     <h2>Project</h2>
 </div>
 
-<div class="proj-wrap" id="skill-content" style="display:none">
-    <h2>Skill</h2>
+<div class="proj-wrap" id="skill-content">
+    <h2>Skills Table</h2>
     <div class="periodic">
         <div class="skill-row">
-            <div class="skill" id="python">
+            <div class="skill pyth" id="python">
+                <img src="{% static 'projects/python.png' %}" class="skill-icon">
                 <p class="skill-descr">Python</p>
             </div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
-            <div class="skill" id="postgres">
+            <div class="skill-blank"></div>
+            <div class="skill db" id="sql">
+                <img src="{% static 'projects/sql.png' %}" class="skill-icon">
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill pyth" id="django">
+                <img src="{% static 'projects/django.png' %}" class="skill-icon">
+            </div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill-blank"></div>
+            <div class="skill js" id="react-native">
+                <img src="{% static 'projects/react-native.png' %}" class="skill-icon">
+            </div>
+            <div class="skill js" id="ember">
+                <img src="{% static 'projects/ember.png' %}" class="skill-icon">
+            </div>
+            <div class="skill db" id="firebase">
+                <img src="{% static 'projects/firebase.png' %}" class="skill-icon">
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill pyth" id="flask">
+                <img src="{% static 'projects/flask.png' %}" class="skill-icon">
+            </div>
+            <div class="skill js" id="javascript">
+                <img src="{% static 'projects/javascript.png' %}" class="skill-icon">
+                <p class="skill-descr">Javascript</p>
+            </div>
+            <div class="skill devops" id="docker">
+                <img src="{% static 'projects/docker.png' %}" class="skill-icon">
+            </div>
+            <div class="skill sysprog" id="java">
+                <img src="{% static 'projects/java.png' %}" class="skill-icon">
+                <p class="skill-descr">Java</p>
+            </div>
+            <div class="skill styling" id="bootstrap">
+                <img src="{% static 'projects/bootstrap.png' %}" class="skill-icon">
+                <p class="skill-descr">Bootstrap</p>
+            </div>
+            <div class="skill api" id="api-google">
+                <img src="{% static 'projects/api-google.png' %}" class="skill-icon">
+                <p class="skill-descr">Google APIs</p>
+            </div>
+            <div class="skill db" id="mongo">
+                <img src="{% static 'projects/mongo.png' %}" class="skill-icon">
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill pyth" id="tensorflow">
+                <img src="{% static 'projects/tensorflow.png' %}" class="skill-icon">
+            </div>
+            <div class="skill js" id="jquery">
+                <img src="{% static 'projects/jquery.png' %}" class="skill-icon">
+            </div>
+            <div class="skill devops" id="kubernetes">
+                <img src="{% static 'projects/kubernetes.png' %}" class="skill-icon">
+            </div>
+            <div class="skill sysprog" id="c">
+                <img src="{% static 'projects/c.png' %}" class="skill-icon">
+                <p class="skill-descr">C Language</p>
+            </div>
+            <div class="skill styling" id="scss">
+                <img src="{% static 'projects/scss.png' %}" class="skill-icon">
+            </div>
+            <div class="skill api" id="api-zendesk">
+                <img src="{% static 'projects/zendesk.png' %}" class="skill-icon">
+                <p class="skill-descr">Zendesk API</p>
+            </div>
+            <div class="skill db" id="oracle">
+                <img src="{% static 'projects/oracle.png' %}" class="skill-icon">
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill" id="matlab">
+                <img src="{% static 'projects/matlab.png' %}" class="skill-icon">
+                <p class="skill-descr">Matlab</p>
+            </div>
+            <div class="skill js" id="ajax">
+                <img src="{% static 'projects/ajax.png' %}" class="skill-icon">
+            </div>
+            <div class="skill devops" id="win-vm">
+                <p class="skill-descr">Win VM Mgr</p>
+            </div>
+            <div class="skill sysprog" id="masm">
+                <p class="skill-descr">MASM</p>
+            </div>
+            <div class="skill styling" id="css">
+                <p class="skill-descr">CSS</p>
+            </div>
+            <div class="skill api" id="api-slack">
+                <p class="skill-descr">Slack API</p>
+            </div>
+            <div class="skill db" id="postgres">
                 <p class="skill-descr">PostgreSQL</p>
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill" id="django">
-                <p class="skill-descr">Django</p>
+            <div class="skill os" id="macOS">
+                <p class="skill-descr">macOS</p>
             </div>
-            <div class="skill-blank"></div>
-            <div class="skill-blank"></div>
-            <div class="skill" id="javascript">
-                <p class="skill-descr">Javascript</p>
+            <div class="skill os" id="arch">
+                <p class="skill-descr">Arch Linux</p>
             </div>
-            <div class="skill" id="ember">
-                <p class="skill-descr">Ember</p>
+            <div class="skill os" id="ubuntu">
+                <p class="skill-descr">Ubuntu</p>
             </div>
-            <div class="skill" id="mongo">
-                <p class="skill-descr">MongoDB</p>
+            <div class="skill os" id="raspbian">
+                <p class="skill-descr">Raspbian</p>
+            </div>
+            <div class="skill os" id="windows">
+                <p class="skill-descr">Windows</p>
+            </div>
+            <div class="skill os" id="fedora">
+                <p class="skill-descr">Fedora</p>
+            </div>
+            <div class="skill os" id="centos">
+                <p class="skill-descr">CentOS</p>
             </div>
         </div>
     </div>
+
 </div>
 {% endblock %}
