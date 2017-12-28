@@ -8,4 +8,23 @@ $(".disp-picker").click(function(){
     $(".proj-wrap[id="+id+"-content]").show(300);
 });
 
+$(".skill").click(function() {
+$.ajax({
+    method: "GET",
+    dataType: "json",
+    url:"/projects/ajax/skill/"+$(this).attr('id'),
+    data: {
+        cool:"hi",
+    },
+    error: function() {
+        console.log("AJAX Error :(");
+        alert("AJAX ERROR!");
+    },
+    success: function(data) {
+        alert("Success!!");
+        console.log(data);
+    }
+});
+});
+
 });

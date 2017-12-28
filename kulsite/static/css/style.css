@@ -142,7 +142,19 @@ font-family: 'Nova Mono', Sans Serif;
 font-size: 2.5rem;
 }
 
+
+
 /* Projects Page */
+.proj-wrap
+{
+margin-top:2rem;
+}
+.proj-content-header
+{
+font-family: 'Neucha', Sans Serif;
+text-align:center;
+font-size:3rem;
+}
 .skill-row
 {
 display:flex;
@@ -193,7 +205,7 @@ background-color: rgba(0, 155, 0, 0.5);
 }
 .pyth:hover
 {
-background-color: rgba(0, 255, 0, 1);
+background-color: rgba(0, 190, 0, 1);
 }
 .js
 {
@@ -233,7 +245,7 @@ background-color: rgba(155, 155, 0, 0.5);
 }
 .sysprog:hover
 {
-background-color: rgba(155, 155, 0, 1);
+background-color: rgba(190, 190, 0, 1);
 }
 .devops
 {
@@ -249,7 +261,7 @@ background-color: rgba(155, 0, 80, 0.5);
 }
 .styling:hover
 {
-background-color: rgba(255, 0, 160, 1);
+background-color: rgba(210, 0, 140, 1);
 }
 #matlab
 {
@@ -257,5 +269,5 @@ background-color: rgba(0,0,0, 0.5);
 }
 #matlab:hover
 {
-background-color: rgba(0,0,0, 1);
+background-color: rgba(50, 50, 50, 1);
 }

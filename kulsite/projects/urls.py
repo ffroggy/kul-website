@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('ajax/skill/<str:skill_id>', views.ajax_skill),
 ]
