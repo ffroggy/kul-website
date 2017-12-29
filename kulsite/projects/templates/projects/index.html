@@ -46,6 +46,33 @@
             <div class="skill js" id="ember">
                 <img src="{% static 'projects/ember.png' %}" class="skill-icon">
             </div>
+            <div class="skill db" id="mongo">
+                <img src="{% static 'projects/mongo.png' %}" class="skill-icon">
+            </div>
+        </div>
+        <div class="skill-row">
+            <div class="skill pyth" id="tensorflow">
+                <img src="{% static 'projects/tensorflow.png' %}" class="skill-icon">
+            </div>
+            <div class="skill js" id="gas">
+                <img src="{% static 'projects/gas.png' %}" class="skill-icon">
+                <p class="skill-descr">Google Apps Script</p>
+            </div>
+            <div class="skill devops" id="kubernetes">
+                <img src="{% static 'projects/kubernetes.png' %}" class="skill-icon">
+            </div>
+            <div class="skill sysprog" id="c">
+                <h1>C</h1>
+                <p class="skill-descr">Language</p>
+            </div>
+            <div class="skill styling" id="css">
+                <img src="{% static 'projects/css.png' %}" class="skill-icon">
+                <p class="skill-descr">CSS</p>
+            </div>
+            <div class="skill api" id="api-google">
+                <img src="{% static 'projects/api-google.png' %}" class="skill-icon">
+                <p class="skill-descr">Google APIs</p>
+            </div>
             <div class="skill db" id="firebase">
                 <img src="{% static 'projects/firebase.png' %}" class="skill-icon">
             </div>
@@ -54,9 +81,8 @@
             <div class="skill pyth" id="flask">
                 <img src="{% static 'projects/flask.png' %}" class="skill-icon">
             </div>
-            <div class="skill js" id="javascript">
-                <img src="{% static 'projects/javascript.png' %}" class="skill-icon">
-                <p class="skill-descr">Javascript</p>
+            <div class="skill js" id="jquery">
+                <img src="{% static 'projects/jquery.png' %}" class="skill-icon">
             </div>
             <div class="skill devops" id="docker">
                 <img src="{% static 'projects/docker.png' %}" class="skill-icon">
@@ -69,31 +95,6 @@
                 <img src="{% static 'projects/bootstrap.png' %}" class="skill-icon">
                 <p class="skill-descr">Bootstrap</p>
             </div>
-            <div class="skill api" id="api-google">
-                <img src="{% static 'projects/api-google.png' %}" class="skill-icon">
-                <p class="skill-descr">Google APIs</p>
-            </div>
-            <div class="skill db" id="mongo">
-                <img src="{% static 'projects/mongo.png' %}" class="skill-icon">
-            </div>
-        </div>
-        <div class="skill-row">
-            <div class="skill pyth" id="tensorflow">
-                <img src="{% static 'projects/tensorflow.png' %}" class="skill-icon">
-            </div>
-            <div class="skill js" id="jquery">
-                <img src="{% static 'projects/jquery.png' %}" class="skill-icon">
-            </div>
-            <div class="skill devops" id="kubernetes">
-                <img src="{% static 'projects/kubernetes.png' %}" class="skill-icon">
-            </div>
-            <div class="skill sysprog" id="c">
-                <h1>C</h1>
-                <p class="skill-descr">Language</p>
-            </div>
-            <div class="skill styling" id="scss">
-                <img src="{% static 'projects/scss.png' %}" class="skill-icon">
-            </div>
             <div class="skill api" id="api-zendesk">
                 <img src="{% static 'projects/zendesk.png' %}" class="skill-icon">
                 <p class="skill-descr">Zendesk API</p>
@@ -103,9 +104,8 @@
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill" id="matlab">
-                <img src="{% static 'projects/matlab.png' %}" class="skill-icon">
-                <p class="skill-descr">Matlab</p>
+            <div class="skill" id="php">
+                <img src="{% static 'projects/php.png' %}" class="skill-icon">
             </div>
             <div class="skill js" id="ajax">
                 <img src="{% static 'projects/ajax.png' %}" class="skill-icon">
@@ -118,9 +118,8 @@
                 <h2>MASM</h2>
                 <p class="skill-descr">Assembly</p>
             </div>
-            <div class="skill styling" id="css">
-                <img src="{% static 'projects/css.png' %}" class="skill-icon">
-                <p class="skill-descr">CSS</p>
+            <div class="skill styling" id="scss">
+                <img src="{% static 'projects/scss.png' %}" class="skill-icon">
             </div>
             <div class="skill api" id="api-slack">
                 <img src="{% static 'projects/slack.png' %}" class="skill-icon">
@@ -131,22 +130,21 @@
             </div>
         </div>
         <div class="skill-row">
+            <div class="skill os" id="arch">
+                <img src="{% static 'projects/arch.png' %}" class="skill-icon">
+            </div>
             <div class="skill os" id="macOS">
                 <img src="{% static 'projects/macos.png' %}" class="skill-icon">
                 <p class="skill-descr">macOS</p>
             </div>
-            <div class="skill os" id="arch">
-                <img src="{% static 'projects/arch.png' %}" class="skill-icon">
-            </div>
-            <div class="skill os" id="ubuntu">
-                <img src="{% static 'projects/ubuntu.png' %}" class="skill-icon">
+            <div class="skill os" id="windows">
+                <img src="{% static 'projects/windows.png' %}" class="skill-icon">
             </div>
             <div class="skill os" id="raspbian">
                 <img src="{% static 'projects/raspbian.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="windows">
-                <img src="{% static 'projects/windows.png' %}" class="skill-icon">
-
+            <div class="skill os" id="ubuntu">
+                <img src="{% static 'projects/ubuntu.png' %}" class="skill-icon">
             </div>
             <div class="skill os" id="fedora">
                 <img src="{% static 'projects/fedora.png' %}" class="skill-icon">
@@ -156,6 +154,22 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade" id="skill-detail" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="skdet-header"></h4>
+                <button type="button" class="close" id="skdet-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
+            <div class="modal-body">
+                <p id="skdet-descr"></p>
+                <p id="skdet-prof"></p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

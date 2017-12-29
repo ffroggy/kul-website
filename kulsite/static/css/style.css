@@ -17,6 +17,9 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+.modal {
+color:black;
+}
 
 /* Navigation */
 .navbar-brand
@@ -263,11 +266,11 @@ background-color: rgba(155, 0, 80, 0.5);
 {
 background-color: rgba(210, 0, 140, 1);
 }
-#matlab
+#php
 {
 background-color: rgba(0,0,0, 0.5);
 }
-#matlab:hover
+#php:hover
 {
 background-color: rgba(50, 50, 50, 1);
 }
