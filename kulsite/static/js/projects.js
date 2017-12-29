@@ -36,6 +36,7 @@ function show_skill(data) {
     }
     $("#skill-detail").modal('show');
     update_prof(data.prof);
+    show_projects(data.proj);
 }
 
 function update_prof(prof_int) {
@@ -50,9 +51,20 @@ function update_prof(prof_int) {
     $("#skdet-p-level").width(((section*prof_int)+(section/2))+"%");
 }
 
+function show_projects(projects) {
+    var proj_html = "";
+    for (proj of projects) {
+        proj_html += "<li class='list-group-item'>";
+        proj_html += proj.name;
+        proj_html += "</li>";
+    }
+    $("#skdet-proj").append(proj_html);
+}
+
 $("#skdet-close").click(function() {
     $("#skdet-header").text("");
     $("#skdet-descr").text("");
+    $("#skdet-proj").html("");
     update_prof(0);
 });
 
