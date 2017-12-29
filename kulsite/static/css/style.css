@@ -21,6 +21,8 @@ body {
 color:black;
 }
 
+
+
 /* Navigation */
 .navbar-brand
 {
@@ -79,6 +81,8 @@ background-color: white;
 {
 color: #3a3a3a;
 }
+
+
 
 /* Home Page */
 .home-wrap
@@ -198,7 +202,6 @@ margin-bottom: 10px;
 }
 .skill-descr
 {
-
 font-size:0.9rem;
 margin:0px;
 }
@@ -273,4 +276,25 @@ background-color: rgba(0,0,0, 0.5);
 #php:hover
 {
 background-color: rgba(50, 50, 50, 1);
+}
+#skdet-prof
+{
+margin-bottom:1rem;
+}
+#skdet-p-head
+{
+display:flex;
+flex-direction:row;
+}
+.skdet-p-h-desc
+{
+width:calc(100%/5);
+text-align: center;
+font-size:0.8rem;
+}
+#skdet-p-level
+{
+height:1rem;
+background-color:steelblue;
+border-radius:5px;
 }
