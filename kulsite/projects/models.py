@@ -7,7 +7,10 @@ class Skill(models.Model):
     s_id = models.TextField(default="")
     show_logo = models.BooleanField(default=True)
     show_text = models.BooleanField(default=False)
-    proficiency = models.IntegerField(default=1)
+    proficiency = models.IntegerField(default=1)  # Expecting an integer value between 1 and 5
+
+    def __str__(self):
+        return str(self.name)+": "+str(self.proficiency)+"/5"
 
 
 class Position(models.Model):
@@ -20,6 +23,9 @@ class Position(models.Model):
     @property
     def current_position(self):
         return self.end_date is None
+
+    def __str__(self):
+        return str(self.title)+" at "+str(self.organization)
 
 
 class Project(models.Model):
@@ -34,9 +40,15 @@ class Project(models.Model):
     def current_project(self):
         return self.end_date is None
 
+    def __str__(self):
+        return self.name
+
 
 class CompletionLog(models.Model):
     date = models.DateField(auto_now_add=True)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     title = models.CharField(max_length=30, default="Project Update")
-    percentage_complete = models.IntegerField(default=0)
+    percentage_complete = models.IntegerField(default=0)  # Expected to be an integer between 0 and 100
+
+    def __str__(self):
+        return str(self.project)+": "+str(self.title)+", "+str(self.percentage_complete)+"% complete on"+str(self.date)
