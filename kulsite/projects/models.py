@@ -29,12 +29,28 @@ class Position(models.Model):
 
 
 class Project(models.Model):
+    STATUS_CHOICES = (
+        ('ip', 'In Progress'),
+        ('fn', 'Finished'),
+        ('dp', 'Deprecated'),
+        ('uf', 'Unfinished'),
+        ('bb', 'Back Burner'),
+        ('up', 'Upcoming'),
+    )
+    MAG_CHOICES = (
+        ('sm', 'Small'),
+        ('md', 'Medium'),
+        ('lg', 'Large')
+    )
+
     name = models.TextField(default="")
     skills = models.ManyToManyField(Skill)
     description = models.TextField(default="")
     positions = models.ManyToManyField(Position)
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
+    status = models.CharField(max_length=2, default='ip', choices=STATUS_CHOICES)
+    magnitude = models.CharField(max_length=2, default='sm', choices=MAG_CHOICES)
 
     @property
     def current_project(self):
