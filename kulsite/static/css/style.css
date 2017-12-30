@@ -298,3 +298,11 @@ height:1rem;
 background-color:steelblue;
 border-radius:5px;
 }
+.sk-collapse
+{
+transition: all linear 0.2s;
+}
+.sk-collapse:hover
+{
+background-color: rgba(0, 0, 0, 0.125);
+}

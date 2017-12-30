@@ -16,6 +16,7 @@ def ajax_skill(request, skill_id):
     proj_out = []
     for project in projects:
         proj_out.append({
+            'id': project.pk,
             'name': project.name,
             'descr': project.description,
             'start': project.start_date,

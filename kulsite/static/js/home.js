@@ -1,7 +1,7 @@
 $(window).on('load', function() {
 var index = 0;
 var titles = [
-    "Dreamer",
+    "Visionary",
     "Developer",
     "Writer",
     "Scholar",

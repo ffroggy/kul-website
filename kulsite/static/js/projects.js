@@ -54,11 +54,12 @@ function update_prof(prof_int) {
 function show_projects(projects) {
     var proj_html = "";
     for (proj of projects) {
-        proj_html += "<li class='list-group-item'>";
-        proj_html += proj.name;
+        proj_html += "<li class='list-group-item sk-collapse' data-toggle='collapse' data-target='#p"+proj.id+"'>";
+        proj_html += "<h6><b>"+proj.name+"</b></h6>";
+        proj_html += "<p class='collapse' id='p"+proj.id+"'>"+proj.descr+"</p>";
         proj_html += "</li>";
     }
-    $("#skdet-proj").append(proj_html);
+    $("#skdet-proj").html(proj_html);
 }
 
 $("#skdet-close").click(function() {
@@ -67,5 +68,4 @@ $("#skdet-close").click(function() {
     $("#skdet-proj").html("");
     update_prof(0);
 });
-
 });
