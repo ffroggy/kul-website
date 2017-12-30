@@ -21,6 +21,8 @@ def ajax_skill(request, skill_id):
             'descr': project.description,
             'start': project.start_date,
             'end': project.end_date,
+            'mag': project.magnitude,
+            'mag_nice': project.get_magnitude_display(),
         })
 
     if not skill:

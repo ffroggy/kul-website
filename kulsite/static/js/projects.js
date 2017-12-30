@@ -55,11 +55,14 @@ function show_projects(projects) {
     var proj_html = "";
     for (proj of projects) {
         proj_html += "<li class='list-group-item sk-collapse' data-toggle='collapse' data-target='#p"+proj.id+"'>";
-        proj_html += "<h6><b>"+proj.name+"</b></h6>";
+        proj_html += "<div class='proj-header'>";
+        proj_html += "<h6><b>"+proj.name+"</b></h6> <p class='pmagt proj-mag-"+proj.mag+"' data-toggle='tooltip' title='Project Size'>"+proj.mag_nice+"</p>";
+        proj_html += "</div>";
         proj_html += "<p class='collapse' id='p"+proj.id+"'>"+proj.descr+"</p>";
         proj_html += "</li>";
     }
     $("#skdet-proj").html(proj_html);
+    $(".pmagt").tooltip();
 }
 
 $("#skdet-close").click(function() {

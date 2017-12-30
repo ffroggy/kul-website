@@ -29,7 +29,7 @@ class Position(models.Model):
 
 
 class Project(models.Model):
-    STATUS_CHOICES = (
+    STATUSES = (
         ('ip', 'In Progress'),
         ('fn', 'Finished'),
         ('dp', 'Deprecated'),
@@ -37,7 +37,7 @@ class Project(models.Model):
         ('bb', 'Back Burner'),
         ('up', 'Upcoming'),
     )
-    MAG_CHOICES = (
+    MAGNITUDES = (
         ('sm', 'Small'),
         ('md', 'Medium'),
         ('lg', 'Large')
@@ -49,8 +49,8 @@ class Project(models.Model):
     positions = models.ManyToManyField(Position)
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
-    status = models.CharField(max_length=2, default='ip', choices=STATUS_CHOICES)
-    magnitude = models.CharField(max_length=2, default='sm', choices=MAG_CHOICES)
+    status = models.CharField(max_length=2, default='ip', choices=STATUSES)
+    magnitude = models.CharField(max_length=2, default='sm', choices=MAGNITUDES)
 
     @property
     def current_project(self):

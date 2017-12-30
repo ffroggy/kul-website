@@ -306,3 +306,35 @@ transition: all linear 0.2s;
 {
 background-color: rgba(0, 0, 0, 0.125);
 }
+.proj-header
+{
+display:flex;
+flex-direction:row;
+align-items: center;
+}
+.proj-header > h6
+{
+margin: 0px;
+}
+.proj-mag-sm, .proj-mag-md, .proj-mag-lg
+{
+border-radius: 5px;
+font-size: 0.7rem;
+margin:0px 0px 0px 10px;
+padding: 0px 2px;
+}
+.proj-mag-sm
+{
+border: 1px solid orangered;
+color: orangered;
+}
+.proj-mag-md
+{
+border: 1px solid goldenrod;
+color: goldenrod;
+}
+.proj-mag-lg
+{
+border: 1px solid forestgreen;
+color: forestgreen;
+}
