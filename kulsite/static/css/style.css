@@ -162,6 +162,8 @@ font-family: 'Neucha', Sans Serif;
 text-align:center;
 font-size:3rem;
 }
+
+/* Skill View Header */
 .skill-row
 {
 display:flex;
@@ -319,7 +321,7 @@ margin: 0px;
 .proj-mag-sm, .proj-mag-md, .proj-mag-lg
 {
 border-radius: 5px;
-font-size: 0.7rem;
+font-size: 0.8rem;
 margin:0px 0px 0px 10px;
 padding: 0px 2px;
 }
@@ -337,4 +339,27 @@ color: goldenrod;
 {
 border: 1px solid forestgreen;
 color: forestgreen;
+}
+
+/* Projects View CSS */
+.card
+{
+color: black;
+}
+.proj-card-head
+{
+display:flex;
+flex-direction:row;
+align-items:center;
+justify-content:space-between;
+margin-bottom:1rem;
+}
+.proj-card-head > .card-title
+{
+margin:0px;
+}
+.proj-card-meta
+{
+display:flex;
+flex-direction: row;
 }
