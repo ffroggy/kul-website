@@ -30,7 +30,7 @@ class Position(models.Model):
 
 class Project(models.Model):
     STATUSES = (
-        ('ip', 'In Progress'),
+        ('ip', 'Ongoing'),
         ('fn', 'Finished'),
         ('dp', 'Deprecated'),
         ('uf', 'Unfinished'),

@@ -1,5 +1,42 @@
 $(window).on('load', function() {
+$(".toool").tooltip();
 
+//Project View
+$(".project").click(function() {
+    $.ajax({
+        method: "GET",
+        dataType: "json",
+        url:"/projects/ajax/project/"+$(this).attr('id'),
+        error: function() {
+            $("#prdet-header").text("Unknown");
+            $("#prdet-descr").text("The AJAX request failed! Please try reloading the page. If the issue persists, please email Nicholas at nachera@live.ccom");
+            $("#project-detail").modal('show');
+        },
+        success: function(data) {
+            console.log(data);
+            show_project(data);
+        }
+    });
+});
+
+function show_project(data) {
+    $("#prdet-skills").text("");
+    if (data.status != "success") {
+        $("#prdet-header").text("Unknown");
+        $("#prdet-descr").text("Hmm, this project doesn't have a description yet. Sorry about that!");
+    } else {
+        $("#prdet-header").text(data.name);
+        $("#prdet-descr").text(data.descr);
+        for (skill of data.skills) {
+            $("#prdet-skills").append("<div class='skill proj-det-skill'>"+
+            "<img src='/static/projects/"+skill.img+".png' class='skill-icon'>"+
+            "<p class='skill-descr'>"+skill.name+"</p></div>");
+        }
+    }
+    $("#project-detail").modal('show');
+}
+
+//Skills View
 $(".disp-picker").click(function(){
     $(".disp-picker").removeClass('active');
     $(this).addClass('active');
@@ -10,20 +47,20 @@ $(".disp-picker").click(function(){
 });
 
 $(".skill").click(function() {
-$.ajax({
-    method: "GET",
-    dataType: "json",
-    url:"/projects/ajax/skill/"+$(this).attr('id'),
-    error: function() {
-        $("#skdet-header").text("Unknown");
-        $("#skdet-descr").text("The AJAX request failed! Please try reloading the page. If the issue persists, please email Nicholas at nachera@live.ccom");
-        $("#skill-detail").modal('show');
-    },
-    success: function(data) {
-        console.log(data);
-        show_skill(data);
-    }
-});
+    $.ajax({
+        method: "GET",
+        dataType: "json",
+        url:"/projects/ajax/skill/"+$(this).attr('id'),
+        error: function() {
+            $("#skdet-header").text("Unknown");
+            $("#skdet-descr").text("The AJAX request failed! Please try reloading the page. If the issue persists, please email Nicholas at nachera@live.ccom");
+            $("#skill-detail").modal('show');
+        },
+        success: function(data) {
+            console.log(data);
+            show_skill(data);
+        }
+    });
 });
 
 function show_skill(data) {
@@ -54,16 +91,23 @@ function update_prof(prof_int) {
 function show_projects(projects) {
     var proj_html = "";
     for (proj of projects) {
-        proj_html += "<li class='list-group-item sk-collapse' data-toggle='collapse' data-target='#p"+proj.id+"'>";
+        proj_html += "<li class='list-group-item sk-collapse' data-toggle='collapse' data-target='#sp"+proj.id+"'>";
         proj_html += "<div class='proj-header'>";
-        proj_html += "<h6><b>"+proj.name+"</b></h6> <p class='pmagt proj-mag-"+proj.mag+"' data-toggle='tooltip' title='Project Size'>"+proj.mag_nice+"</p>";
+        proj_html += "<h6><b>"+proj.name+"</b></h6> <p class='toool proj-mag-"+proj.mag+"' data-toggle='tooltip' title='Project Size'>"+proj.mag_nice+"</p>";
         proj_html += "</div>";
-        proj_html += "<p class='collapse' id='p"+proj.id+"'>"+proj.descr+"</p>";
+        proj_html += "<p class='collapse' id='sp"+proj.id+"'>"+proj.descr+"</p>";
         proj_html += "</li>";
     }
     $("#skdet-proj").html(proj_html);
-    $(".pmagt").tooltip();
+    $(".toool").tooltip();
 }
+
+$("#prdet-close").click(function() {
+    $("#prdet-header").text("");
+    $("#prdet-descr").text("");
+    $("#prdet-proj").html("");
+    $("#prdet-skills").html("");
+});
 
 $("#skdet-close").click(function() {
     $("#skdet-header").text("");

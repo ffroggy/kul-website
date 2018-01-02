@@ -161,16 +161,21 @@ margin-top:2rem;
 font-family: 'Neucha', Sans Serif;
 text-align:center;
 font-size:3rem;
+margin-bottom:1.5rem;
 }
 
 /* Skill View Header */
+.periodic
+{
+overflow:auto;
+margin: 0% 3%;
+}
 .skill-row
 {
 display:flex;
 flex-direction: row;
+justify-content: start;
 align-items: center;
-justify-content: center;
-width: 100%;
 }
 .skill-icon
 {
@@ -179,7 +184,7 @@ border-radius:5px;
 }
 .skill
 {
-flex-basis: 15rem;
+min-width: 10rem;
 border: 1px solid white;
 display: flex;
 flex-direction: column;
@@ -197,7 +202,7 @@ cursor:pointer;
 }
 .skill-blank
 {
-flex-basis: 15rem;
+min-width: 10rem;
 padding: 2px;
 margin-right: 10px;
 margin-bottom: 10px;
@@ -318,39 +323,52 @@ align-items: center;
 {
 margin: 0px;
 }
-.proj-mag-sm, .proj-mag-md, .proj-mag-lg
+.proj-mag-sm, .proj-mag-md, .proj-mag-lg,
+.proj-stat-ip, .proj-stat-fn, .proj-stat-dp,
+.proj-stat-uf, .proj-stat-bb, .proj-stat-up
 {
 border-radius: 5px;
 font-size: 0.8rem;
 margin:0px 0px 0px 10px;
 padding: 0px 2px;
 }
-.proj-mag-sm
+.proj-mag-sm, .proj-stat-dp
 {
 border: 1px solid orangered;
 color: orangered;
 }
-.proj-mag-md
+.proj-mag-md, .proj-stat-ip
 {
 border: 1px solid goldenrod;
 color: goldenrod;
 }
-.proj-mag-lg
+.proj-mag-lg, .proj-stat-fn
 {
 border: 1px solid forestgreen;
 color: forestgreen;
 }
+.proj-stat-bb
+{
+border: 1px solid  #3498db;
+color:  #3498db;
+}
+.proj-stat-uf
+{
+border: 1px solid  #99a3a4;
+color:  #99a3a4;
+}
+.proj-stat-up
+{
+border: 1px solid  #e67e22;
+color:  #e67e22;
+}
 
 /* Projects View CSS */
-.card
-{
-color: black;
-}
 .proj-card-head
 {
 display:flex;
 flex-direction:row;
-align-items:center;
+align-items:start;
 justify-content:space-between;
 margin-bottom:1rem;
 }
@@ -362,4 +380,28 @@ margin:0px;
 {
 display:flex;
 flex-direction: row;
+align-items:start;
+}
+.proj-card
+{
+cursor: pointer;
+transition: all linear 0.2s;
+border: 2px solid white;
+background-color: rgba(0, 0, 0, 0.5);
+display: inline-block;
+}
+.proj-card:hover
+{
+background-color: white;
+color: black;
+border-color: darkgrey;
+}
+#prdet-skills
+{
+max-height: 30rem;
+overflow:auto;
+}
+.proj-det-skill
+{
+background-color: darkgrey;
 }

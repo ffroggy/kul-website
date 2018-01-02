@@ -4,15 +4,19 @@ from .models import Skill, Project
 
 
 def index(request):
+    projects = Project.objects.all().order_by('-start_date')
     context = {
-        'curr_page': 'projects'
+        'curr_page': 'projects',
+        'projects': projects,
     }
     return load_page(request, 'projects/index.html', context)
 
 
 def ajax_skill(request, skill_id):
-    skill = Skill.objects.filter(s_id=skill_id).first()
-    projects = Project.objects.filter(skills__s_id=skill_id)
+    skill_id = skill_id[1:]
+
+    skill = Skill.objects.get(id=skill_id)
+    projects = Project.objects.filter(skills__id=skill_id)
     proj_out = []
     for project in projects:
         proj_out.append({
@@ -36,3 +40,26 @@ def ajax_skill(request, skill_id):
         'proj': proj_out,
     }
     return JsonResponse(skill_out)
+
+
+def ajax_project(request, proj_id):
+    proj_id = proj_id[1:]
+    project = Project.objects.get(id=proj_id)
+
+    skill_out = []
+    for skill in project.skills.all():
+        skill_out.append({
+            'name': skill.name,
+            'img': skill.s_id,
+            'show_logo': skill.show_logo,
+            'show_text': skill.show_text,
+        })
+
+    project_out = {
+        'status': "success",
+        'name': project.name,
+        'descr': project.description,
+        'skills': skill_out,
+    }
+
+    return JsonResponse(project_out)

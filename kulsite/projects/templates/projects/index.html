@@ -17,30 +17,20 @@
 <div class="proj-wrap" id="project-content">
     <h1 class="proj-content-header">Projects</h1>
     <div class="card-columns">
-        <div class="card">
+        {% for project in projects %}
+        <div class="project card proj-card" id="p{{project.id}}">
             <div class="card-body">
                 <div class="proj-card-head">
-                    <h3 class="card-title">Sidekick</h3>
+                    <h5 class="card-title"><b>{{project.name}}</b></h5>
                     <div class="proj-card-meta">
-                        <p class="proj-mag-lg">Large</p>
-                        <p class="proj-mag-md">In Progress</p>
+                        <p class="toool proj-mag-{{project.magnitude}}" data-toggle='tooltip' title='Project Size'>{{project.get_magnitude_display}}</p>
+                        <p class="toool proj-stat-{{project.status}}" data-toggle='tooltip' title='Project Status'>{{project.get_status_display}}</p>
                     </div>
                 </div>
-                <p class="card-text">Sidekick is the new version of the employee web portal at IMT Device Solutions that I designed and built from the ground up wth a team of developers. It features a check-in interface that allows managers to check employees into their shift, a shift covers application that synchronizes with a set of Google calendars, an automated quote tool built in Javascript, and an employee management interface that lets managers log discipline marks, awards, and proficiencies.</p>
+                <p class="card-text">{{project.description|slice:"0:90"}}...</p>
             </div>
         </div>
-        <div class="card">
-            Here's another one for ya :D
-        </div>
-        <div class="card">
-            And one more
-        </div>
-        <div class="card">
-            Hi there, this is a card with more text than the ohter ones to illustrate how this maybe actually works
-        </div>
-        <div class="card">
-            This is a card bout myself, Nicholas Chera. It's a test
-        </div>
+        {% endfor %}
     </div>
 </div>
 
@@ -49,7 +39,7 @@
     <h1 class="proj-content-header">Languages and Frameworks</h1>
     <div class="periodic noselect">
         <div class="skill-row">
-            <div class="skill pyth" id="python">
+            <div class="skill pyth" id="s0">
                 <img src="{% static 'projects/python.png' %}" class="skill-icon">
                 <p class="skill-descr">Python</p>
             </div>
@@ -58,127 +48,127 @@
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
-            <div class="skill db" id="sql">
+            <div class="skill db" id="s1">
                 <img src="{% static 'projects/sql.png' %}" class="skill-icon">
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill pyth" id="django">
+            <div class="skill pyth" id="s2">
                 <img src="{% static 'projects/django.png' %}" class="skill-icon">
             </div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
             <div class="skill-blank"></div>
-            <div class="skill js" id="react-native">
+            <div class="skill js" id="s3">
                 <img src="{% static 'projects/react-native.png' %}" class="skill-icon">
             </div>
-            <div class="skill js" id="ember">
+            <div class="skill js" id="s4">
                 <img src="{% static 'projects/ember.png' %}" class="skill-icon">
             </div>
-            <div class="skill db" id="mongo">
+            <div class="skill db" id="s5">
                 <img src="{% static 'projects/mongo.png' %}" class="skill-icon">
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill pyth" id="tensorflow">
+            <div class="skill pyth" id="s6">
                 <img src="{% static 'projects/tensorflow.png' %}" class="skill-icon">
             </div>
-            <div class="skill js" id="gas">
+            <div class="skill js" id="s7">
                 <img src="{% static 'projects/gas.png' %}" class="skill-icon">
                 <p class="skill-descr">Google Apps Script</p>
             </div>
-            <div class="skill devops" id="kubernetes">
+            <div class="skill devops" id="s8">
                 <img src="{% static 'projects/kubernetes.png' %}" class="skill-icon">
             </div>
-            <div class="skill sysprog" id="c">
+            <div class="skill sysprog" id="s9">
                 <h1>C</h1>
                 <p class="skill-descr">Language</p>
             </div>
-            <div class="skill styling" id="css">
+            <div class="skill styling" id="s10">
                 <img src="{% static 'projects/css.png' %}" class="skill-icon">
                 <p class="skill-descr">CSS</p>
             </div>
-            <div class="skill api" id="api-google">
+            <div class="skill api" id="s11">
                 <img src="{% static 'projects/api-google.png' %}" class="skill-icon">
                 <p class="skill-descr">Google APIs</p>
             </div>
-            <div class="skill db" id="firebase">
+            <div class="skill db" id="s12">
                 <img src="{% static 'projects/firebase.png' %}" class="skill-icon">
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill pyth" id="flask">
+            <div class="skill pyth" id="s13">
                 <img src="{% static 'projects/flask.png' %}" class="skill-icon">
             </div>
-            <div class="skill js" id="jquery">
+            <div class="skill js" id="s14">
                 <img src="{% static 'projects/jquery.png' %}" class="skill-icon">
             </div>
-            <div class="skill devops" id="docker">
+            <div class="skill devops" id="s15">
                 <img src="{% static 'projects/docker.png' %}" class="skill-icon">
             </div>
-            <div class="skill sysprog" id="java">
+            <div class="skill sysprog" id="s16">
                 <img src="{% static 'projects/java.png' %}" class="skill-icon">
                 <p class="skill-descr">Java</p>
             </div>
-            <div class="skill styling" id="bootstrap">
+            <div class="skill styling" id="s17">
                 <img src="{% static 'projects/bootstrap.png' %}" class="skill-icon">
                 <p class="skill-descr">Bootstrap</p>
             </div>
-            <div class="skill api" id="api-zendesk">
+            <div class="skill api" id="s18">
                 <img src="{% static 'projects/zendesk.png' %}" class="skill-icon">
                 <p class="skill-descr">Zendesk API</p>
             </div>
-            <div class="skill db" id="oracle">
+            <div class="skill db" id="s19">
                 <img src="{% static 'projects/oracle.png' %}" class="skill-icon">
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill" id="php">
+            <div class="skill" id="s20">
                 <img src="{% static 'projects/php.png' %}" class="skill-icon">
             </div>
-            <div class="skill js" id="ajax">
+            <div class="skill js" id="s21">
                 <img src="{% static 'projects/ajax.png' %}" class="skill-icon">
             </div>
-            <div class="skill devops" id="win-vm-mgr">
+            <div class="skill devops" id="s22">
                 <img src="{% static 'projects/win-vm-mgr.png' %}" class="skill-icon">
                 <p class="skill-descr">Win VM Mgr</p>
             </div>
-            <div class="skill sysprog" id="masm">
+            <div class="skill sysprog" id="s23">
                 <h2>MASM</h2>
                 <p class="skill-descr">Assembly</p>
             </div>
-            <div class="skill styling" id="scss">
+            <div class="skill styling" id="s24">
                 <img src="{% static 'projects/scss.png' %}" class="skill-icon">
             </div>
-            <div class="skill api" id="api-slack">
+            <div class="skill api" id="s25">
                 <img src="{% static 'projects/slack.png' %}" class="skill-icon">
                 <p class="skill-descr">Slack API</p>
             </div>
-            <div class="skill db" id="postgres">
+            <div class="skill db" id="s26">
                 <img src="{% static 'projects/postgres.png' %}" class="skill-icon">
             </div>
         </div>
         <div class="skill-row">
-            <div class="skill os" id="arch">
+            <div class="skill os" id="s27">
                 <img src="{% static 'projects/arch.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="macOS">
+            <div class="skill os" id="s28">
                 <img src="{% static 'projects/macos.png' %}" class="skill-icon">
                 <p class="skill-descr">macOS</p>
             </div>
-            <div class="skill os" id="windows">
+            <div class="skill os" id="s29">
                 <img src="{% static 'projects/windows.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="raspbian">
+            <div class="skill os" id="s30">
                 <img src="{% static 'projects/raspbian.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="ubuntu">
+            <div class="skill os" id="s31">
                 <img src="{% static 'projects/ubuntu.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="fedora">
+            <div class="skill os" id="s32">
                 <img src="{% static 'projects/fedora.png' %}" class="skill-icon">
             </div>
-            <div class="skill os" id="centos">
+            <div class="skill os" id="s33">
                 <img src="{% static 'projects/centos.png' %}" class="skill-icon">
             </div>
         </div>
@@ -212,6 +202,33 @@
             <div class="list-group list-group-flush noselect" id="skdet-proj"></div>
             <div class="modal-body"></div>
         </div>
+    </div>
+</div>
+
+<div class="modal fade" id="project-detail" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="prdet-header"></h4>
+                <button type="button" class="close" id="prdet-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <p id="prdet-descr"></p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h2>Skills</h2>
+                        <div id="prdet-skills">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 {% endblock %}
