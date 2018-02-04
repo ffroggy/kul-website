@@ -37,13 +37,16 @@ function show_project(data) {
 }
 
 //Skills View
-$(".disp-picker").click(function(){
+$(".disp-picker").click(function() {
+    if ($(this).hasClass('active'))
+        return;
+
     $(".disp-picker").removeClass('active');
     $(this).addClass('active');
 
     var id = $(this).attr('id');
-    $(".proj-wrap").hide(300);
-    $(".proj-wrap[id="+id+"-content]").show(300);
+
+    $(".proj-wrap").fadeOut("fast", function() {console.log("fun");$(".proj-wrap[id="+id+"-content]").fadeIn("fast");});
 });
 
 $(".skill").click(function() {

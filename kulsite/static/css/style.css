@@ -317,6 +317,7 @@ background-color: rgba(0, 0, 0, 0.125);
 {
 display:flex;
 flex-direction:row;
+justify-content:space-between;
 align-items: center;
 }
 .proj-header > h6
@@ -339,7 +340,7 @@ color: orangered;
 }
 .proj-mag-md, .proj-stat-ip
 {
-border: 1px solid goldenrod;
+border: 1px solid darkgoldenrod;
 color: goldenrod;
 }
 .proj-mag-lg, .proj-stat-fn
@@ -364,6 +365,33 @@ color:  #e67e22;
 }
 
 /* Projects View CSS */
+.proj-col-wrap
+{
+background-color: rgba(0,0,0,0.25);
+border: 2px solid white;
+border-radius: 5px;
+margin: 5px;
+max-height:600px;
+overflow-y:auto;
+overflow-x:visible;
+min-width: 375px;
+}
+.proj-col-head
+{
+margin: 10px;
+}
+.proj-col-title
+{
+font-family:'Neucha';
+border-bottom:1px solid white;
+text-align:center;
+margin-bottom:10px;
+}
+.proj-col-header
+{
+margin: 0px;
+text-align:center;
+}
 .proj-card-head
 {
 display:flex;
@@ -389,6 +417,7 @@ transition: all linear 0.2s;
 border: 2px solid white;
 background-color: rgba(0, 0, 0, 0.5);
 display: inline-block;
+margin-bottom:10px;
 }
 .proj-card:hover
 {
@@ -399,7 +428,8 @@ border-color: darkgrey;
 #prdet-skills
 {
 max-height: 30rem;
-overflow:auto;
+overflow-x:hidden;
+overflow-y:auto;
 }
 .proj-det-skill
 {

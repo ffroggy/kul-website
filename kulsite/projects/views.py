@@ -1,13 +1,16 @@
 from kulsite.views import load_page
 from django.http import JsonResponse
-from .models import Skill, Project
+from .models import Skill, Project, Position
 
 
 def index(request):
-    projects = Project.objects.all().order_by('-start_date')
+    positions = Position.objects.all()
+    pos_projects = []
+    for pos in positions:
+        pos_projects.append([pos, Project.objects.filter(positions__id=pos.id).order_by('-start_date')])
     context = {
         'curr_page': 'projects',
-        'projects': projects,
+        'pos_projects': pos_projects,
     }
     return load_page(request, 'projects/index.html', context)
 

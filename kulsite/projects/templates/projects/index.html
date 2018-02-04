@@ -3,32 +3,35 @@
 {% block content %}
 <h5>View By:</h5>
 <div class="btn-group" role="group" aria-label="...">
-    <button class="btn disp-picker btn-outline-light" id="position">Position</button>
     <button class="btn disp-picker btn-outline-light active" id="project">Project</button>
     <button class="btn disp-picker btn-outline-light" id="skill">Skill</button>
 </div>
 
 
-<div class="proj-wrap" id="position-content" style="display:none">
-
-</div>
-
-
 <div class="proj-wrap" id="project-content">
     <h1 class="proj-content-header">Projects</h1>
-    <div class="card-columns">
-        {% for project in projects %}
-        <div class="project card proj-card" id="p{{project.id}}">
-            <div class="card-body">
-                <div class="proj-card-head">
-                    <h5 class="card-title"><b>{{project.name}}</b></h5>
-                    <div class="proj-card-meta">
-                        <p class="toool proj-mag-{{project.magnitude}}" data-toggle='tooltip' title='Project Size'>{{project.get_magnitude_display}}</p>
-                        <p class="toool proj-stat-{{project.status}}" data-toggle='tooltip' title='Project Status'>{{project.get_status_display}}</p>
-                    </div>
-                </div>
-                <p class="card-text">{{project.description|slice:"0:90"}}...</p>
+    <div class="row">
+        {% for position, projects in pos_projects %}
+        <div class="col proj-col-wrap">
+            <div class="proj-col-head">
+                <h2 class="proj-col-title">{{position.title}}</h2>
+                <h5 class="proj-col-header">{{position.organization}}</h5>
+                <h5 class="proj-col-header">{{position.date_range}}</h5>
             </div>
+            {% for project in projects %}
+            <div class="project card proj-card" id="p{{project.id}}">
+                <div class="card-body">
+                    <div class="proj-card-head">
+                        <h5 class="card-title"><b>{{project.name}}</b></h5>
+                        <div class="proj-card-meta">
+                            <p class="toool proj-mag-{{project.magnitude}}" data-toggle='tooltip' title='Project Size'>{{project.get_magnitude_display}}</p>
+                            <p class="toool proj-stat-{{project.status}}" data-toggle='tooltip' title='Project Status'>{{project.get_status_display}}</p>
+                        </div>
+                    </div>
+                    <p class="card-text">{{project.description|slice:"0:90"}}...</p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
         {% endfor %}
     </div>
@@ -115,7 +118,7 @@
                 <p class="skill-descr">Bootstrap</p>
             </div>
             <div class="skill api" id="s18">
-                <img src="{% static 'projects/zendesk.png' %}" class="skill-icon">
+                <img src="{% static 'projects/api-zendesk.png' %}" class="skill-icon">
                 <p class="skill-descr">Zendesk API</p>
             </div>
             <div class="skill db" id="s19">

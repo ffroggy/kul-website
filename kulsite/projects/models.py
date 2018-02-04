@@ -24,6 +24,13 @@ class Position(models.Model):
     def current_position(self):
         return self.end_date is None
 
+    @property
+    def date_range(self):
+        if self.current_position:
+            return self.start_date.strftime('%b %Y')+" - Present"
+        else:
+            return self.start_date.strftime('%b %Y')+" - "+self.end_date.strftime('%b %Y')
+
     def __str__(self):
         return str(self.title)+" at "+str(self.organization)
 
