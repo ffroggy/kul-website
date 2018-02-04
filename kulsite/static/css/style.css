@@ -374,6 +374,10 @@ overflow-y:auto;
 overflow-x:visible;
 min-width: 375px;
 }
+.proj-col-blank
+{
+margin:8px;
+}
 .proj-col-head
 {
 margin: 10px;
