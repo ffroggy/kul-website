@@ -27,9 +27,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = conf['prod']['secret']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = conf['prod']['debug']=='True'
 
-ALLOWED_HOSTS = [conf['host']['prod']]  # define more here in your config file
+ALLOWED_HOSTS = [
+    conf['host']['prod'],
+    'www.nicholas-chera.me',
+    'nicholas-chera.me',
+
+]  # define more here in your config file
 
 
 # Application definition
