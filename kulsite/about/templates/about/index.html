@@ -2,7 +2,23 @@
 {% load staticfiles %}
 {% block content %}
 <h1 class="about-content-header">About me</h1>
-<img class="about-me-img" src="{% static 'about/me_headshot.jpg' %}">
-
-<p>this is text</p>
+<div class="row">
+    <div class="col-md-2 col-sm-0"></div>
+    <div class="col-md-8 col-sm-12 about-wrap">
+        <div class="media">
+            <div class="media-body">
+                <h1 class="mt-0">Hi there!</h1>
+                <h5>I am a programmer, but also a whole lot more! Among other things, I enjoy</h5>
+                <ul class="about-list">
+                    <li>Riddles</li>
+                    <li>Good Movies</li>
+                    <li>Languages</li>
+                    <li>Hiking</li>
+                </ul>
+            </div>
+            <img class="about-me-img ml-3" src="{% static 'about/me_headshot.jpg' %}">
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-0"></div>
+</div>
 {% endblock %}

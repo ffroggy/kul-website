@@ -436,6 +436,13 @@ background-color: darkgrey;
 
 
 /* About Page */
+.about-wrap
+{
+background-color: rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 10px #5d7aff;
+border-radius: 5px;
+padding: 15px;
+}
 .about-content-header
 {
 font-family: 'Neucha', Sans Serif;
@@ -453,6 +460,10 @@ justify-content:space-around;
 {
 height:20rem;
 width:20rem;
-border-radius:10px;
+border-radius:5px;
 border: 3px solid white;
+}
+.about-list
+{
+font-size:1.5rem;
 }
