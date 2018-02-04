@@ -28,7 +28,7 @@
                             <p class="toool proj-stat-{{project.status}}" data-toggle='tooltip' title='Project Status'>{{project.get_status_display}}</p>
                         </div>
                     </div>
-                    <p class="card-text">{{project.description|slice:"0:90"}}...</p>
+                    <p class="card-text">{{project.description|slice:"0:35"}}...</p>
                 </div>
             </div>
             {% endfor %}
