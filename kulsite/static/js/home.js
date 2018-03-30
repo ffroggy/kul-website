@@ -44,6 +44,6 @@ updateSubtitle();
 
 function getTextWidth(text) {
     $(".ruler").text(text);
-    return $(".ruler").width();
+    return $(".ruler").width()+20;
 }
 })
